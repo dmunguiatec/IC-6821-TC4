@@ -1,0 +1,18 @@
+@startuml
+
+title Trie Find
+
+start
+:current = root;
+
+:for each c in key;
+repeat
+    :current = current.children.get(c);
+    if (current = null) then (yes)
+        :return empty set;
+        stop
+    endif
+repeatwhile
+:return current.bucket;
+stop
+@enduml

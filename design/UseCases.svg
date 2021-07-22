@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="231px" preserveAspectRatio="none" style="width:386px;height:231px;background:#FFFFFF;" version="1.1" viewBox="0 0 386 231" width="386px" zoomAndPan="magnify"><defs><filter height="300%" id="fo59rhg8y71rm" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="118" x="127.9729" y="16.708">Casos de uso</text><!--MD5=[128f0757cf0ea77f14e95a88885fd9f7]
+entity Usuario--><ellipse cx="126.5" cy="34.9531" fill="#FEFECE" filter="url(#fo59rhg8y71rm)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M126.5,42.9531 L126.5,69.9531 M113.5,50.9531 L139.5,50.9531 M126.5,69.9531 L113.5,84.9531 M126.5,69.9531 L139.5,84.9531 " fill="none" filter="url(#fo59rhg8y71rm)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="99.5" y="103.4482">Usuario</text><ellipse cx="281.7229" cy="65.9977" fill="#FEFECE" filter="url(#fo59rhg8y71rm)" rx="93.2229" ry="21.0446" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="207.2229" y="68.8444">Indexar un directorio</text><ellipse cx="126.3027" cy="192.9137" fill="#FEFECE" filter="url(#fo59rhg8y71rm)" rx="120.3027" ry="26.4605" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="208" x="22.3027" y="195.7603">Buscar archivos por términos</text><!--MD5=[8e823c023843be089f1010094c7c01a5]
+link Usuario to Index--><path d="M153.75,65.9531 C163.52,65.9531 173.29,65.9531 183.07,65.9531 " fill="none" id="Usuario-to-Index" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="188.18,65.9531,179.18,61.9531,183.18,65.9531,179.18,69.9531,188.18,65.9531" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[92c273b1ff3f9d239164b5c0cbc196d2]
+link Usuario to Search--><path d="M126.5,106.5031 C126.5,124.1131 126.5,144.5431 126.5,161.0131 " fill="none" id="Usuario-to-Search" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="126.5,166.4331,130.5,157.4331,126.5,161.4331,122.5,157.4331,126.5,166.4331" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[389d34c86670bb1baf874e8bb4f2df56]
+@startuml
+title Casos de uso
+
+:Usuario: -right-> (Index)
+:Usuario: - -> (Search)
+"Indexar un directorio" as (Index)
+"Buscar archivos por términos" as (Search)
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 06:40:07 CST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

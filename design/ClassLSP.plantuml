@@ -1,0 +1,64 @@
+@startuml
+
+title Index (LSP refactor)
+
+package edu.tec.ic6821.fulltextsearch {
+
+    package index {
+
+        interface Index {
+            + index(String term, File):void
+            + search(String term):Set<File>
+        }
+
+        interface PersistentIndex {
+            + persist():void
+            + restore():boolean
+        }
+
+        class InMemoryMapIndex {
+            - index:Map<String, Set<File>>
+        }
+
+        class MapIndex {
+            - indexFile:File
+            + MapIndex(:File, :Index)
+        }
+
+        Index <|.. InMemoryMapIndex
+        Index <|-- PersistentIndex
+        PersistentIndex <|.. MapIndex
+        InMemoryMapIndex <-- MapIndex :<<delegate>>\nindex
+
+        PersistentIndex <|.. TrieIndex
+
+        class TrieIndex {
+            - indexFile:File
+            + TrieIndex(:File, :Trie<File>)
+        }
+    }
+
+    package trie {
+
+
+        interface Trie<V> {
+            + insert(String key, V value):void
+            + find(String key):Set<V>
+        }
+
+        class HashTrie<V> {
+            - root:TrieNode
+        }
+
+        class TrieNode {
+            - children:Map<Character, TrieNode>
+            - bucket:Set<V>
+        }
+
+        Trie<|..HashTrie
+        HashTrie+--TrieNode
+        TrieIndex "index" -up-> Trie :<<bind>>\nV:File
+    }
+}
+
+@enduml

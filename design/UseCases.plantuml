@@ -1,0 +1,8 @@
+@startuml
+title Casos de uso
+
+:Usuario: -right-> (Index)
+:Usuario: --> (Search)
+"Indexar un directorio" as (Index)
+"Buscar archivos por términos" as (Search)
+@enduml
