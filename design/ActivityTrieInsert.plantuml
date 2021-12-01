@@ -7,11 +7,13 @@ start
 
 :for each c in key;
 repeat
-    :current = current.children.get(c);
-    if (current = null) then (yes)
-        :node = new TrieNode();
-        :current.children.put(c, node);
-        :current = node;
+    :next = current.children.get(c);
+    if (next == null) then (yes)
+        :next = new TrieNode();
+        :current.children.put(c, next);
+        :current = next;
+    else (no)
+        :current = next;
     endif
 repeatwhile
 :current.bucket.add(value);
